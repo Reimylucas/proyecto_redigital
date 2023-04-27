@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+
+    <!--- Required meto tags/metaetiquetas --->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reimy's Salon Center</title>
+    
+    <!--- Bootstrap CSS --->
+    <link rel="stylesheet" href="estilos.css">
+    
+</head>
+<body>
+
+    <header class="header" id="">
+
+        <!--- ********************** --->
+        <!--- Comienza menù principal--->
+        <!--- ********************** --->
+
+        <img class="" src="img/hamburguesa.svg" alt="">
+
+        <div class="contenedor head">
+            <h1 class="titulo">Convertimos tu belleza en un misterio hermoso</h1>
+            <p class="copy">El gran estilo nace cuando lo bello obtiene la victoria sobre lo enorme.</p>
+        </div>
+        <button class="btn btn-link btn-sm order-1 order-lg-0 me-4 me-lg-0" id="sidebarToggle" href="#!"><i class="fas fa-bars"></i></button>
+        <!-- Navbar Search-->
+        @*<form class="d-none d-md-inline-block form-inline ms-auto me-0 me-md-3 my-2 my-md-0">
+            <div class="input-group">
+                <input class="form-control" type="text" placeholder="Search for..." aria-label="Search for..." aria-describedby="btnNavbarSearch" />
+                <button class="btn btn-primary" id="btnNavbarSearch" type="button"><i class="fas fa-search"></i></button>
+            </div>
+        </form>*@
+        <!-- Navbar-->
+        <ul class="navbar-nav ms-auto me-0 me-md-3 my-2 my-md-0">
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="fas fa-user fa-fw"></i></a>
+                <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                    <li><a class="dropdown-item" href="#!">Correo del Usuario</a></li>
+                    <li><hr class="dropdown-divider" /></li>
+                    <li><a class="dropdown-item" href="#!">Cerrar Sesion</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+    <div id="layoutSidenav">
+        <div id="layoutSidenav_nav">
+            <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
+                <div class="sb-sidenav-menu">
+                    <div class="nav">
+
+                        <div class="sb-sidenav-menu-heading">Resumen</div>
+                        <a class="nav-link" href="" @Url.Action("Index", "Incio") ">
+                            <div class="sb-nav-link-icon"><i class="bi bi-justify"></i></div>
+                            Inicio
+                        </a>
+
+                        <a class="nav-link" href="@Url.Action("Index","Home")">
+                            <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
+                            Gestion
+                        </a>
+
+                        <a class="nav-link" href="@Url.Action("Usuarios","Home")">
+                            <div class="sb-nav-link-icon"><i class="fas fa-users"></i></div>
+                            Usuarios
+                        </a>
+                        <div class="sb-sidenav-menu-heading">Mantenimiento</div>
+                        <a class="nav-link" href="@Url.Action("Categoria","Mantenedor")">
+                            <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
+                            Categorias
+                        </a>
+                        <a class="nav-link" href="@Url.Action("Marca","Mantenedor")">
+                            <div class="sb-nav-link-icon"><i class="fas fa-bookmark"></i></div>
+                            Marcas
+                        </a>
+                        <a class="nav-link" href="@Url.Action("Producto","Mantenedor")">
+                            <div class="sb-nav-link-icon"><i class="fas fa-boxes"></i></div>
+                            Productos
+                        </a>
+                    </div>
+                </div>
+                <div class="sb-sidenav-footer">
+                    <div class="small">:</div>
+                    
+                </div>
+            </nav>
+        </div>
+        <div id="layoutSidenav_content">
+            <main>
+                <div class="container-fluid px-4">
+                    @RenderBody()
+    </header>
+
+    <!--- ********************** --->
+    <!--- Finaliza menù principal--->
+    <!--- ********************** --->
+    
+
+        <!--- ******************* --->
+        <!--- Comienza contenedor --->
+        <!--- ******************* --->
+    <main>
+        <section class="services contenedor" id="servicio">
+            <h2 class="subtitulo">Nuestro servicio.</h2>
+            <div class="contenedor-servicio">
+                <img src="img/checklist.svg" alt="">
+                <div class="checklist-servicio">
+                    <div class="service">
+                        <h3 class="n-service"><span class="number">1</span>Colorimetría profesional para el cabello.</h3>
+                        <p>Identificamos tu tono de piel, subtonos y organizamos estrategias para poder alcanzar los resultados que deseas sin dañar tu pelo.</p>
+                    </div>
+                    <div class="service">
+                        <h3 class="n-service"><span class="number">2</span>Realizamos cortes Fade o degradado.</h3>
+                        <p>Diferentes modificaciones de tipo de peinado, implica intervenciones como trenzar, alisar, entre otros.</p>
+                    </div>
+                    <div class="service">
+                        <h3 class="n-service"><span class="number">3</span>Técnicas para el lavado del cabello.</h3>
+                        <p>Evitamos dañar tu cabello y hacer de esta una experiencia satisfactoria.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="gallery" id="galeria">            
+            
+            <div class="contenedor">                
+                <h2 class="subtitulo">Galeria.</h2>
+                <div class="contenedor-galeria">
+                    
+                    <img src="img/uno.jpg" class="img-galeria" alt="">
+                    <img src="img/dos.jpg" class="img-galeria" alt="">
+                    <img src="img/tres.jpg" class="img-galeria" alt="">
+                    <img src="img/cuatro.jpg" class="img-galeria" alt="">
+                    <img src="img/cinco.jpg" class="img-galeria" alt="">
+                    <img src="img/seis.jpg" class="img-galeria" alt="">
+                    <img src="img/siete.jpg" class="img-galeria" alt="">
+                    <img src="img/ocho.jpg" class="img-galeria" alt="">
+                    <img src="img/nueve.jpg" class="img-galeria" alt="">
+                    
+                </div>
+            </div>
+        </section>
+        <div class="imagen-light">
+            <img src="img/close.svg" alt="" class="close">
+            <img src="" alt="" class="agregar-imagen">
+        </div>
+        <section class="contenedor" id="expertos">
+            <h2 class="subtitulo">Profesionales de Imagen Personal:</h2>
+            <section class="experts">
+                <div class="cont-expert">
+                    <img src="img/User interface-uno.svg" alt="">
+                    <h3 class="n-expert">Maquillaje.</h3>
+                </div>
+                <div class="cont-expert">
+                    <img src="img/Wearing a mask-dos.svg" alt="">
+                    <h3 class="n-expert">Peluquería.</h3>
+                </div>
+                <div class="cont-expert">
+                    <img src="img/Profile analysis-tres.svg" alt="">
+                    <h3 class="n-expert">Estética.</h3>
+                </div>
+            </section>
+        </section>
+        <!--- ************************* --->
+        <!--- Finalizacion de productos --->
+        <!--- ************************* --->
+    </main>
+
+    <!--- ********************** --->
+    <!--- Finaliza el contenedor --->
+    <!--- ********************** --->
+
+        <!--- ************* --->
+        <!--- Inicio Footer --->
+        <!--- ************* --->
+
+    <footer id="footer">
+        <div class="contenedor footer-content">
+                <div class="contact-us">
+                    <h2 class="brand">Reimy's BG Salon Center</h2>
+                    <p>Somos expertos en la creación de tu estilo.</p>
+                </div>
+                <div class="social-media">
+                    <a href="./" class="social-media-icon">
+                        <i class='bx bxl-facebook'></i>
+                    </a>
+                    <a href="./" class="social-media-icon">
+                        <i class='bx bxl-twitter' ></i>
+                    </a>
+                    <a href="./" class="social-media-icon">
+                        <i class='bx bxl-instagram' ></i>
+                    </a>
+                </div>
+        </div>
+        <div class="line"></div>
+
+        <!--- *************** --->
+        <!--- Finaliza footer --->
+        <!--- *************** --->
+    </footer>
+
+    <script src="js/menu.js"></script>
+    <script src="js/lightbox.js"></script>
+ 
+</body>
+</html>
